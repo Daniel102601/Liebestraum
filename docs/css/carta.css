@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0eada; /* Color de fondo estilo hoja de cuaderno antigua */
+  font-family: 'Cinzel Decorative', cursive; /* Fuente estilo antiguo */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+
+}
+
+.paper {
+  background-color: #f0eada; /* Color del papel */
+  padding: 20px;
+  border: 10px solid #ccc; /* Borde estilo cuaderno antiguo */
+  border-radius: 10px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 36px;
+  text-align: center;
+  color: #8a2be2;
+}
+
+.content {
+  font-size: 20px;
+  line-height: 1.5;
+}
+.container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px; /* Reducir la distancia entre la carta y el botón */
+}
+#playButton {
+  display: block;
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: #8a2be2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#playButton:hover {
+  background-color: #6a1bbd; /* Cambio de color al pasar el mouse */
+}
+.pink-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #ffcccc; /* Color rosa pálido */
+  color: #333; /* Color del texto */
+  border: 2px solid #ffcccc;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 80px; /* Añade margen derecho para separar los botones */
+  margin-left: 80px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.pink-button:hover {
+  background-color: #ffb3b3; /* Color rosa más oscuro al pasar el mouse */
+  color: #fff; /* Cambiar color del texto al pasar el mouse */
+  border-color: #ffb3b3; /* Cambiar color del borde al pasar el mouse */
+}

@@ -1,0 +1,68 @@
+.title {
+  font-family: 'Amatic SC', cursive;
+  font-size: 60px; /* Tamaño del título */
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px; /* Espaciado inferior */
+  letter-spacing: 2px; /* Ajusta el espacio entre letras */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.stars, .twinkling {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent url('https://www.transparenttextures.com/patterns/starfield.png');
+}
+
+.stars {
+  background-size: 1px 1px;
+  z-index: 0;
+}
+
+.twinkling {
+  background-size: 1000px 1000px;
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  animation: animate-twinkling 20s linear infinite;
+  z-index: 1;
+}
+
+@keyframes animate-twinkling {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 1000px 1000px;
+  }
+}
+
+
+.big-button {
+  padding: 20px 40px;
+  font-size: 24px;
+  background-color: #B582C8; /* Color lila */
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3); /* Agrega una sombra suave */
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Agrega transiciones suaves */
+  position: relative; /* Agregado */
+  z-index: 2; /* Agregado */
+}
+
+.big-button:hover {
+  background-color: #5D2A70; /* Cambio de color al pasar el mouse */
+  transform: translateY(-2px); /* Eleva ligeramente el botón */
+  box-shadow: 0 8px 20px rgba(138, 43, 226, 0.6); /* Aumenta la sombra */
+}

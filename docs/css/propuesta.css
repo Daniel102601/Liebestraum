@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Ocultar el desbordamiento del contenido */
+}
+
+.aurora {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #000000, #191919, #000000);
+  z-index: -1;
+}
+
+.aurora::before, .aurora::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 80% 30%, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 75%);
+  animation: aurora-animation 20s ease-in-out infinite;
+}
+
+.aurora::after {
+  background: radial-gradient(circle at 60% 70%, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+  animation: aurora-animation-reverse 20s ease-in-out infinite;
+}
+
+@keyframes aurora-animation {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes aurora-animation-reverse {
+  0% {
+    transform: translateY(50%);
+  }
+  50% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(50%);
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.neon-title {
+  font-size: 72px;
+  color: #FFFFFF; /* Cambiar el color del texto a blanco */
+  text-align: center;
+  text-shadow: 0 0 10px #FFC4E2,  /* Cambiar a un tono de rosa o lila pastel */
+               0 0 20px #FF85E8,  /* Cambiar a un tono de rosa o lila pastel */
+               0 0 30px #FFC4E2,  /* Cambiar a un tono de rosa o lila pastel */
+               0 0 40px #FF85E8,  /* Cambiar a un tono de rosa o lila pastel */
+               0 0 70px #FFC4E2,  /* Cambiar a un tono de rosa o lila pastel */
+               0 0 80px #FF85E8,  /* Cambiar a un tono de rosa o lila pastel */
+               0 0 100px #FFC4E2, /* Cambiar a un tono de rosa o lila pastel */
+               0 0 150px #FF85E8; /* Cambiar a un tono de rosa o lila pastel */
+  margin-bottom: 50px;
+  transition: text-shadow 0.5s ease-in-out; /* Transición para el efecto neon */
+  font-family: 'Sacramento', cursive; /* Cambiar la fuente */
+}
+
+.neon-title:hover {
+  color: #FF85E8; /* Cambiar el color del texto a rosa o lila pastel */
+  text-shadow: 0 0 5px #FFC4E2,  /* Ajustar el color del neon para mejor contraste */
+               0 0 15px #FFC4E2, /* Ajustar el color del neon para mejor contraste */
+               0 0 20px #FFC4E2, /* Ajustar el color del neon para mejor contraste */
+               0 0 30px #FF85E8, /* Ajustar el color del neon para mejor contraste */
+               0 0 40px #FF85E8, /* Ajustar el color del neon para mejor contraste */
+               0 0 50px #FF85E8, /* Ajustar el color del neon para mejor contraste */
+               0 0 60px #FF85E8, /* Ajustar el color del neon para mejor contraste */
+               0 0 80px #FF85E8; /* Ajustar el color del neon para mejor contraste */
+}
+
+@keyframes neon-glow {
+  0% {
+    text-shadow: 0 0 5px #FFFFFF,
+                 0 0 15px #FFFFFF,
+                 0 0 20px #FFFFFF,
+                 0 0 30px #FF85E8,
+                 0 0 40px #FF85E8,
+                 0 0 50px #FF85E8,
+                 0 0 60px #FF85E8,
+                 0 0 80px #FF85E8;
+  }
+  100% {
+    text-shadow: 0 0 10px #FFC4E2,
+                 0 0 20px #FF85E8,
+                 0 0 30px #FFC4E2,
+                 0 0 40px #FF85E8,
+                 0 0 70px #FFC4E2,
+                 0 0 80px #FF85E8,
+                 0 0 100px #FFC4E2,
+                 0 0 150px #FF85E8;
+  }
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #FF85E8; /* Cambiar a un tono de rosa o lila pastel */
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+  margin-right: 80px; /* Añade margen derecho para separar los botones */
+  margin-left: 80px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+  background-color: #FFC4E2; /* Cambiar a un tono más claro del mismo color pastel */
+  color: #fff;
+  animation: button-scale 0.3s ease forwards; /* Agregar animación de cambio de tamaño al pasar el mouse */
+}
+
+@keyframes button-scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
